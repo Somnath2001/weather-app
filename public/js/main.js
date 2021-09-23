@@ -4,17 +4,19 @@ const city_name = document.getElementById("city_name");
 const temp_status = document.getElementById("temp_status");
 const temp_rel_value = document.getElementById("temp_rel_value");
 const datahide = document.querySelector(".middle_layer");
+const api = document.getElementById("api");
 
 const getInfo = async (event) => {
   event.preventDefault();
   let cityVal = cityname.value;
+  let API_KEY = api.innerText;
 
   if (cityVal === "") {
     city_name.innerText = `Please write the City Name Before Search`;
     datahide.classList.add("data_hide");
   } else {
     try {
-      let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=1228cd1e4f5c81284f965fff254fd6d1`;
+      let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=${API_KEY}`;
       const response = await fetch(url);
       const data = await response.json();
 
