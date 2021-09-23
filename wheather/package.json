@@ -1,0 +1,17 @@
+{
+  "name": "wheather",
+  "version": "1.0.0",
+  "description": "wheather app",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon src/app.js"
+  },
+  "author": "Somnath",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.2",
+    "nodemon": "^2.0.12"
+  }
+}
